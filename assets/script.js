@@ -52,7 +52,43 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
       player.stopVideo();
     } 
 
-    // Code for search history rendered as a list using local storage (to line 30)
+//Dave's code begins
+
+    const buttonEl = document.querySelector("#movie-search");
+const inputEl = document.querySelector("#inputValue");
+const movieSearch = document.querySelector("#movie-search");
+
+const url =
+  "https://api.themoviedb.org/3/search/movie?api_key=3dd58e763b5dcef7202b88abe0351696";
+const apiKey = "3dd58e763b5dcef7202b88abe0351696";
+const imageUrl = "https://image.tmdb.org/t/p/w1280";
+
+function showMovie() {
+  const movieEl = document.createElement("div");
+  movieEl.setAttribute("class", "movie");
+}
+
+buttonEl.onclick = function (event) {
+  event.preventDefault();
+  const value = inputEl.value;
+  console.log("Value: ", value);
+
+  const newUrl = url + "&query=" + value;
+
+  fetch(newUrl)
+    .then((res) => res.json())
+    .then((data) => {
+      const movies = data.results;
+
+      console.log(data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+//Dave's code ends
+
+    // Code for search history rendered as a list using local storage 
 var submitButton = document.getElementById('button');
 var viewed = JSON.parse(localStorage.getItem("viewed")) || []
 console.log(viewed)
