@@ -88,7 +88,7 @@ buttonEl.onclick = function (event) {
 };
 //Dave's code ends
 
-    // Code for search history rendered as a list using local storage 
+// Code for search history rendered as a list using local storage 
 var submitButton = document.getElementById('button');
 var viewed = JSON.parse(localStorage.getItem("viewed")) || []
 console.log(viewed)
