@@ -24,8 +24,12 @@
  <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
   
     <class="search">Search movies 
-      <form> <input type="text" placeholder="search..." name="search">
-      <button type="submit">Submit</button></form>
+      <form> <input  id="search" type="text" placeholder="search..." name="search">
+      <button id="button" type="submit">Submit</button></form>
+      <div> <h2>History</h2> 
+        <ul id="history"> </ul>
+      </div> 
+
     <h1>Rainy-day-movies</h1>
     <div class="movie-container">
       <img src="icons8-bookmark-48.png" alt="" />
@@ -41,7 +45,8 @@
 
     <div id="player"></div>
 
-    <script src="./assets/script.js"></script>
+   
     <footer>Created by team 4!</footer>
+   <script src="./assets/script.js"></script>
   </body>
 </html>

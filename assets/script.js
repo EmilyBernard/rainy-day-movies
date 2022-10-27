@@ -1,3 +1,34 @@
+// Code for search history rendered as a list using local storage (to line 30)
+var submitButton = document.getElementById('button');
+var viewed = JSON.parse(localStorage.getItem("viewed")) || []
+console.log(viewed)
+viewHistory()
+submitButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    store();
+    });
+
+function store(){
+    var searched = document.getElementById('search').value;
+    console.log(searched);
+    if(viewed.indexOf(searched)=== -1){
+      viewed.push(searched)
+      localStorage.setItem('viewed', JSON.stringify(viewed));
+      viewHistory() 
+    }
+};
+
+function viewHistory(){
+  var historyUl=document.getElementById('history')
+  historyUl.innerHTML=""
+  for (var i=0; i < viewed.length; i++){
+    var value=viewed[i]
+    var li=document.createElement("li")
+    li.textContent=value
+    historyUl.append(li)
+  }
+}
+
  // 2. This code loads the IFrame Player API code asynchronously.
  var tag = document.createElement('script');
 
@@ -41,3 +72,4 @@
  function stopVideo() {
    player.stopVideo();
  }
+ 
