@@ -66,7 +66,7 @@ function playTrailer(){
 //Dave's code begins
 
     const buttonEl = document.querySelector("#movie-search");
-const inputEl = document.querySelector("#inputValue");
+const inputEl = document.querySelector("#search");
 const movieSearch = document.querySelector("#movie-search");
 
 const url =
