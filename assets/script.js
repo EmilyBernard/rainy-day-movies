@@ -66,7 +66,7 @@ function playTrailer(){
 //Dave's code begins
 
     const buttonEl = document.querySelector("#movie-search");
-const inputEl = document.querySelector("#inputValue");
+const inputEl = document.querySelector("#search");
 const movieSearch = document.querySelector("#movie-search");
 
 const url =
@@ -99,7 +99,7 @@ buttonEl.onclick = function (event) {
 };
 //Dave's code ends
 
-    // Code for search history rendered as a list using local storage 
+// Code for search history rendered as a list using local storage 
 var submitButton = document.getElementById('button');
 var viewed = JSON.parse(localStorage.getItem("viewed")) || []
 console.log(viewed)
