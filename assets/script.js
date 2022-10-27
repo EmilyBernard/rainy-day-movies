@@ -1,24 +1,29 @@
 //  Global variables
-var search = 'avatar';
-var trailerSearch = search + " trailer";
-var videoId; 
+var search = '';
+var trailerSearch;
+var searchMovieForm = $("#searchMovieForm");
+var videoId;
 
+// function that uses the search to play a youtube video
+function playTrailer(){  
+  event.preventDefault();
+  trailerSearch = search + " trailer";
 // 2. This code loads the IFrame Player API code asynchronously.
-var tag = document.createElement('script');
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
  
- var player;
- var ApiUrl = 'https://www.googleapis.com/youtube/v3/search?part=snippet&q=' + trailerSearch + '&key=AIzaSyBF3dcNNg8A-nfg5JA2egOYNZh5q7gDdbc';
-  const fetchPromise = fetch(ApiUrl)
+  var player;
+  var ApiUrl = 'https://www.googleapis.com/youtube/v3/search?part=snippet&q=' + trailerSearch + '&key=AIzaSyA-EDW6SrRyhR9UWgLanUTtKzVbl3VTl_E';
+  fetch(ApiUrl)
     .then(function (response) {
       return response.json();
     })
     .then(function (response) {
       videoId = response.items[0].id.videoId;
     })
-     // 3. This function creates an <iframe> (and YouTube player)
+    // 3. This function creates an <iframe> (and YouTube player)
     //    after the API code downloads.
     .then(function onYouTubeIframeAPIReady() {
       player = new YT.Player('player', {
@@ -51,6 +56,12 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
     function stopVideo() {
       player.stopVideo();
     } 
+  }
+
+  $(searchMovieForm).on("submit", function () {
+    search = $("#search").val().trim();
+     playTrailer();
+   });
 
 //Dave's code begins
 
