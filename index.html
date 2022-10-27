@@ -1,34 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rainy Day Movies</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./assets/style.css" />
-  </head>
-  <body>
- <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-  
-    <class="search">Search movies 
-      <form> <input  id="search" type="text" placeholder="search..." name="search">
-      <button id="button" type="submit">Submit</button></form>
-      <div> <h2>History</h2> 
-        <ul id="history"> </ul>
-      </div> 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rainy Day Movies</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+
+<body>
+  <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+
+  <class="search">Search movies
+    <form> <input id="search" type="text" placeholder="search..." name="search">
+      <button id="button" type="submit">Submit</button>
+    </form>
+    <div>
+      <h2>History</h2>
+      <ul id="history"> </ul>
+    </div>
 
     <h1>Rainy-day-movies</h1>
     <div class="movie-container">
@@ -41,12 +36,16 @@
       <img src="icons8-bookmark-48.png" alt="" />
     </div>
 
-    
+
 
     <div id="player"></div>
+
+
+    <footer>Created by team 4!</footer>
+
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="./assets/script.js"></script>
 
-  </body>
-   <footer>Created by team 4!</footer>
+</body>
+
 </html>
