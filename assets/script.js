@@ -62,12 +62,12 @@ function playTrailer(){
     search = $("#search").val().trim();
      playTrailer();
    });
-
+   
 //Dave's code begins
 
-    const buttonEl = document.querySelector("#movie-search");
-const inputEl = document.querySelector("#search");
-const movieSearch = document.querySelector("#movie-search");
+const buttonEl = document.querySelector("#search");
+const inputEl = document.querySelector("#searchMovieForm");
+const movieSearch = document.querySelector("#search");
 
 const url =
   "https://api.themoviedb.org/3/search/movie?api_key=3dd58e763b5dcef7202b88abe0351696";
