@@ -21,9 +21,36 @@
     <link rel="stylesheet" href="./assets/style.css" />
   </head>
   <body>
+    <!--Hero Section-->
+
+    <div class="hero">
+      <nav>
+        <h2 class="logo">RainyDay <span>Movies</span></h2>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#movies">Movies</a></li>
+          <li><a href="#series">Series</a></li>
+          <li><a href="#upcoming">Upcoming</a></li>
+        </ul>
+      </nav>
+
+      <div id="player"></div>
+    </div>
+
+    <!-- My Picks-->
+    <section class="upcoming" id="upcoming">
+      <div class="main">
+        <img src="assets/images/hero-image.webp" alt="">
+        <div class="upcoming-text">
+          <h2>Upcoming</h2>
+          <h5>Ant-Man and the Wasp: Quantumania</h5>
+          <p>Coming Feburary, 17, 2023</p>
+        </div>
+      </div>
+    </section>
  <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
   
-    <nav class="search">Search movies <button>search</button></nav>
+  <!-- <nav class="search">Search movies <button>search</button></nav>-->
     <div class="movie-container">
       <img src="icons8-bookmark-48.png" alt="" />
     </div>
@@ -34,7 +61,7 @@
 
     <h1>Rainy Day Movies</h1>
 
-    <div id="player"></div>
+    <!--<div id="player"></div>-->
 
     <script src="./assets/script.js"></script>
   </body>
