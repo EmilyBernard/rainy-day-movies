@@ -84,7 +84,7 @@ function playTrailer(){
          console.log(error);
        });
    });
-
+   
 //Dave's code begins
 
 function showMovie() {
