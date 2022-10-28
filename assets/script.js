@@ -1,8 +1,16 @@
 //  Global variables
 var search = '';
 var trailerSearch;
-var searchMovieForm = $("#searchMovieForm");
+var searchMovieForm = document.querySelector("#searchMovieForm");
 var videoId;
+
+var buttonEl = document.querySelector("#search");
+var movieSearch = document.querySelector("#search");
+
+var url =
+  "https://api.themoviedb.org/3/search/movie?api_key=3dd58e763b5dcef7202b88abe0351696";
+var apiKey = "3dd58e763b5dcef7202b88abe0351696";
+var imageUrl = "https://image.tmdb.org/t/p/w1280";
 
 // function that uses the search to play a youtube video
 function playTrailer(){  
@@ -58,74 +66,60 @@ function playTrailer(){
     } 
   }
 
-  $(searchMovieForm).on("submit", function () {
-    search = $("#search").val().trim();
+  searchMovieForm.addEventListener("submit", function () {
      playTrailer();
+     console.log('test');
+     const value = movieSearch.value;
+     console.log("Value: ", value);
+     const newUrl = url + "&query=" + value;
+    console.log(newUrl);
+     fetch(newUrl)
+       .then((res) => res.json())
+       .then((data) => {
+         const movies = data.results;
+   
+         console.log(data);
+       })
+       .catch((error) => {
+         console.log(error);
+       });
    });
    
 //Dave's code begins
 
-const buttonEl = document.querySelector("#search");
-const inputEl = document.querySelector("#searchMovieForm");
-const movieSearch = document.querySelector("#search");
-
-const url =
-  "https://api.themoviedb.org/3/search/movie?api_key=3dd58e763b5dcef7202b88abe0351696";
-const apiKey = "3dd58e763b5dcef7202b88abe0351696";
-const imageUrl = "https://image.tmdb.org/t/p/w1280";
-
 function showMovie() {
-  const movieEl = document.createElement("div");
+  var movieEl = document.createElement("div");
   movieEl.setAttribute("class", "movie");
-}
-
-buttonEl.onclick = function (event) {
-  event.preventDefault();
-  const value = inputEl.value;
-  console.log("Value: ", value);
-
-  const newUrl = url + "&query=" + value;
-
-  fetch(newUrl)
-    .then((res) => res.json())
-    .then((data) => {
-      const movies = data.results;
-
-      console.log(data);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-};
+} 
 //Dave's code ends
 
 // Code for search history rendered as a list using local storage 
-var submitButton = document.getElementById('button');
-var viewed = JSON.parse(localStorage.getItem("viewed")) || []
-console.log(viewed)
-viewHistory()
-submitButton.addEventListener("click", function(event) {
-    event.preventDefault();
-    store();
-    });
+// var submitButton = document.getElementById('button');
+// var viewed = JSON.parse(localStorage.getItem("viewed")) || []
+// console.log(viewed)
+// viewHistory()
+// submitButton.addEventListener("click", function(event) {
+//     event.preventDefault();
+//     store();
+//     });
 
-function store(){
-    var searched = document.getElementById('search').value;
-    console.log(searched);
-    if(viewed.indexOf(searched)=== -1){
-      viewed.push(searched)
-      localStorage.setItem('viewed', JSON.stringify(viewed));
-      viewHistory() 
-    }
-};
+// function store(){
+//     var searched = document.getElementById('search').value;
+//     console.log(searched);
+//     if(viewed.indexOf(searched)=== -1){
+//       viewed.push(searched);
+//       localStorage.setItem('viewed', JSON.stringify(viewed));
+//       viewHistory();
+//     }
+// };
 
-function viewHistory(){
-  var historyUl=document.getElementById('history')
-  historyUl.innerHTML=""
-  for (var i=0; i < viewed.length; i++){
-    var value=viewed[i]
-    var li=document.createElement("li")
-    li.textContent=value
-    historyUl.append(li)
-  }
-}
+// function viewHistory(){
+//   var historyUl=document.getElementById('history')
+//   historyUl.innerHTML=""
+//   for (var i=0; i < viewed.length; i++){
+//     var value=viewed[i]
+//     var li=document.createElement("li")
+//     li.textContent=value
+//     historyUl.append(li)
+//   }
+// }
