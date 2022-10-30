@@ -1,73 +1,66 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+
+
+html, body {
+height: 100%;
+width: 100%;
+font-family: sans-serif;
 }
 
-.hero {
+.navbar {
+    padding: .8rem;
+}
+
+.navbar-nav li {
+    padding-right: 20px;
+}
+
+.nav-link {
+    font-size: 1.1em;
+}
+
+.carousel-inner img {
     width: 100%;
-    height: 100vh;
-    background-image: url(images/Hero-2.jpeg);
-    background-size: cover;
-    background-position: center;
+    height: 100%;
 }
 
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 45px;
-    padding-left: 8%;
-    padding-right: 8%;
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Orbitron';
+    font-weight: 700;
 }
 
-.logo {
-    color: white;
-    font-size: 35px;
-    letter-spacing: 1px;
-    cursor: pointer;
+.carousel-caption h1 {
+    font-size: 500%;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 15px #000;
 }
 
-nav ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 10px 25px;
+.carousel-caption h3 {
+    font-size: 200%;
+    font-weight: 500;
+    text-shadow: 1px 1px 10px #000;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: capitalize;
-}
+.about {
 
-nav ul li a:hover {
-    color: #f9004d;
-    transition: .4s;
-}
-
-span {
-    color: #f9004d;
-}
-
-#player {
-  float: right;
-  margin-right: 4%;
-}
-
-.upcoming {
     width: 100%;
     padding: 100px 0px;
     background-color: white;
 }
 
-.upcoming img {
+
+
+.about img {
+
     height: auto;
     width: 430px;
 }
 
-.upcoming-text {
+
+.about-text {
+
     width: 550px;
 }
 
@@ -80,22 +73,35 @@ span {
     justify-content: space-around;
 }
 
-.upcoming-text h2 {
+
+
+.about-text h2 {
+
     font-size: 75px;
     text-transform: capitalize;
     margin-bottom: 20px;
 }
 
-.upcoming-text h5 {
+
+
+.about-text h5 {
     letter-spacing: 2px;
-    text-transform: capitalize;
     font-size: 22px;
-    margin-bottom: 45px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
 }
 
-.upcoming-text p {
+.about-text p {
+
     letter-spacing: 1px;
     line-height: 28px;
     font-size: 18px;
     margin-bottom: 45px;
+
+
+}
+
+.card-group img {
+    height: 300px;
+
 }

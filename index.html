@@ -1,68 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rainy Day Movies</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./assets/style.css" />
-  </head>
-  <body>
-    <!--Hero Section-->
 
-    <div class="hero">
-      <nav>
-        <h2 class="logo">RainyDay <span>Movies</span></h2>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#movies">Movies</a></li>
-          <li><a href="#series">Series</a></li>
-          <li><a href="#upcoming">Upcoming</a></li>
-        </ul>
-      </nav>
+=======
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rainy Day Movies</title>
 
-      <div id="player"></div>
-    </div>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
 
-    <!-- My Picks-->
-    <section class="upcoming" id="upcoming">
-      <div class="main">
-        <img src="assets/images/hero-image.webp" alt="">
-        <div class="upcoming-text">
-          <h2>Upcoming</h2>
-          <h5>Ant-Man and the Wasp: Quantumania</h5>
-          <p>Coming Feburary, 17, 2023</p>
+<body>
+  <!-- Navbar-->
+  <ul class="nav justify-content-end">
+    <li class="nav-item">
+      <a class="nav-link active" href="#about-me">About Me</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+  </ul>
+
+  <!-- Image Slider-->
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="pics/top view umbrella.jpeg" class="d-block w-100" alt="...">
+        <div class="carousel-caption">
+          <h1 class="display-2">Rainy Day Movies</h1>
+          <h3>For Whenever</h3>
         </div>
       </div>
-    </section>
- <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-  
-  <!-- <nav class="search">Search movies <button>search</button></nav>-->
+      <div class="carousel-item">
+        <img src="..." class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="..." class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <!--Check it out-->
+  <section class="about" id="about-me">
+    <div class="main">
+        <img src="pics/carousel2.jpg">
+        <div class="about-text">
+            <h4>May We Suggest?</h4>
+            <h2>Amsterdam</h2>
+            <p>In Theaters Now
+            </p>
+        </div>
+    </div>
+</section>
+
+<!--Card Section-->
+<div class="card-group">
+  <div class="card">
+    <img src="pics/carousel3.jpg" class="card-img-top" alt="..." >
+    <div class="card-body">
+      <h5 class="card-title">Coming Soon</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="pics/card4.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Series</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="pics/card5.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Yesterday's Best</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+    </div>
+  </div>
+</div>
+
+
+  <class="search">Search movies
+    <form id="searchMovieForm"> <input id="search" type="text" placeholder="search..." name="search">
+      <button id="button" type="submit">Submit</button>
+    </form>
+    <div>
+      <h2>History</h2>
+      <ul id="history"> </ul>
+    </div>
+
+    <h1>Rainy-day-movies</h1>
+>>>>>>> main
     <div class="movie-container">
       <img src="icons8-bookmark-48.png" alt="" />
     </div>
+    <div class="review-container" id="reviews"></div>
+    <div class="plot-summary" id="plot"></div>
 
     <div class="youtube-container">
       <img src="icons8-bookmark-48.png" alt="" />
     </div>
 
-    <h1>Rainy Day Movies</h1>
+
 
     <!--<div id="player"></div>-->
 
+
+    <footer>Created by team 4!</footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
     <script src="./assets/script.js"></script>
-  </body>
+
+</body>
+
+<script src="https://cdnjs.cloudfare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudfare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
 </html>
