@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-=======
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -18,15 +16,20 @@
 
 <body>
   <!-- Navbar-->
+  <class="search">Search movies
+    <form id="searchMovieForm"> <input id="search" type="text" placeholder="search..." name="search">
+      <button id="button" type="submit">Submit</button>
+    </form>
+  
   <ul class="nav justify-content-end">
     <li class="nav-item">
       <a class="nav-link active" href="#about-me">About Me</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <a id="history"class="nav-link" href="#">Searches</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="#">My List</a>
     </li>
   </ul>
 
@@ -62,6 +65,7 @@
     </a>
   </div>
 
+  <div id="player"></div>
   <!--Check it out-->
   <section class="about" id="about-me">
     <div class="main">
@@ -101,17 +105,6 @@
 </div>
 
 
-  <class="search">Search movies
-    <form id="searchMovieForm"> <input id="search" type="text" placeholder="search..." name="search">
-      <button id="button" type="submit">Submit</button>
-    </form>
-    <div>
-      <h2>History</h2>
-      <ul id="history"> </ul>
-    </div>
-
-    <h1>Rainy-day-movies</h1>
->>>>>>> main
     <div class="movie-container">
       <img src="icons8-bookmark-48.png" alt="" />
     </div>
@@ -122,9 +115,7 @@
       <img src="icons8-bookmark-48.png" alt="" />
     </div>
 
-
-
-    <!--<div id="player"></div>-->
+  
 
 
     <footer>Created by team 4!</footer>
@@ -134,7 +125,5 @@
 
 </body>
 
-<script src="https://cdnjs.cloudfare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudfare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
 </html>
