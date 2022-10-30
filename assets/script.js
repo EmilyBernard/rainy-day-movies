@@ -8,7 +8,7 @@ var buttonEl = document.querySelector("#search");
 var movieSearch = document.querySelector("#search");
 
 var url =
-  "https://api.themoviedb.org/3/search/movie?api_key=3dd58e763b5dcef7202b88abe0351696";
+  "https://api.themoviedb.org/3/search/movie/{movie_id}/images?api_key=3dd58e763b5dcef7202b88abe0351696";
 var apiKey = "3dd58e763b5dcef7202b88abe0351696";
 var imageUrl = "https://image.tmdb.org/t/p/w1280";
 
@@ -90,6 +90,7 @@ function playTrailer(){
 function showMovie() {
   var movieEl = document.createElement("div");
   movieEl.setAttribute("class", "movie");
+  
 } 
 //Dave's code ends
 
