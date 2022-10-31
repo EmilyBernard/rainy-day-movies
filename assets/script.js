@@ -8,7 +8,7 @@ var buttonEl = document.querySelector("#search");
 var movieSearch = document.querySelector("#search");
 
 var url =
-  "https://api.themoviedb.org/3/search/movie/{movie_id}/images?api_key=3dd58e763b5dcef7202b88abe0351696";
+  "https://api.themoviedb.org/3/search/movie?api_key=3dd58e763b5dcef7202b88abe0351696";
 var apiKey = "3dd58e763b5dcef7202b88abe0351696";
 var imageUrl = "https://image.tmdb.org/t/p/w1280";
 
@@ -77,22 +77,34 @@ function playTrailer(){
        .then((res) => res.json())
        .then((data) => {
          const movies = data.results;
-   
+         var output = '';
+         $.each(movies, index, movie) => {
+          ouput += `
+          <div class="movie-container">
+          <div class="well text-center">
+          <img src=${movie.poster_path}
+          <h4>${movie.title}</h4>
+          <a onclick="movieSelected('${movie.id}')" class="btn btn-primary" href="#">Movie Details</a>
+          </div>
+          </div>
+          `;
+         }
          console.log(data);
+         4(".movie-container").html(output);
        })
        .catch((error) => {
          console.log(error);
        });
    });
    
-//Dave's code begins
+
 
 function showMovie() {
   var movieEl = document.createElement("div");
   movieEl.setAttribute("class", "movie");
-  
+  movieEl.innerText = data.page.results
 } 
-//Dave's code ends
+
 
 // Code for search history rendered as a list using local storage 
 // var submitButton = document.getElementById('button');
