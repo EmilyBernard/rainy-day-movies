@@ -93,33 +93,35 @@ function showMovie() {
 } 
 //Dave's code ends
 
-// Code for search history rendered as a list using local storage 
-// var submitButton = document.getElementById('button');
-// var viewed = JSON.parse(localStorage.getItem("viewed")) || []
-// console.log(viewed)
-// viewHistory()
-// submitButton.addEventListener("click", function(event) {
-//     event.preventDefault();
-//     store();
-//     });
+//Below code uses local storage to render recent searches as buttons lower on the page above the footer
 
-// function store(){
-//     var searched = document.getElementById('search').value;
-//     console.log(searched);
-//     if(viewed.indexOf(searched)=== -1){
-//       viewed.push(searched);
-//       localStorage.setItem('viewed', JSON.stringify(viewed));
-//       viewHistory();
-//     }
-// };
+var submitButton = document.getElementById('button');
+var viewed = JSON.parse(localStorage.getItem("viewed")) || []
+console.log(viewed)
+viewHistory()
+submitButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    store();
+    });
 
-// function viewHistory(){
-//   var historyUl=document.getElementById('history')
-//   historyUl.innerHTML=""
-//   for (var i=0; i < viewed.length; i++){
-//     var value=viewed[i]
-//     var li=document.createElement("li")
-//     li.textContent=value
-//     historyUl.append(li)
-//   }
-// }
+function store(){
+    var searched = document.getElementById('search').value;
+    console.log(searched);
+    if(viewed.indexOf(searched)=== -1){
+      viewed.push(searched)
+      localStorage.setItem('viewed', JSON.stringify(viewed));
+      viewHistory() 
+    }
+};
+
+function viewHistory(){
+  var historyUl=document.getElementById('recent-searches')
+  historyUl.innerHTML=""
+  for (var i=0; i < viewed.length; i++){
+    var value=viewed[i]
+    var button=document.createElement("button")
+    button.classList.add("button")
+    button.textContent=value
+    historyUl.append(button)
+  }
+}
