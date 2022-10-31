@@ -1,10 +1,10 @@
 
 
 html, body {
-height: 100%;
-width: 100%;
-font-family: sans-serif;
-}
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+    }
 
 .button {
     display: flex;
@@ -52,13 +52,11 @@ font-family: sans-serif;
 }
 
 .about {
-    
+
     width: 100%;
     padding: 100px 0px;
     background-color: white;
 }
-
-
 
 .about img {
 
@@ -81,8 +79,8 @@ font-family: sans-serif;
     justify-content: space-around;
 }
 
-
-
+    
+    
 .about-text h2 {
 
     font-size: 75px;
@@ -113,3 +111,4 @@ font-family: sans-serif;
     height: 300px;
 
 }
+

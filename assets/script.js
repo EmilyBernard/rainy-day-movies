@@ -77,21 +77,34 @@ function playTrailer(){
        .then((res) => res.json())
        .then((data) => {
          const movies = data.results;
-   
+         var output = '';
+         $.each(movies, index, movie) => {
+          ouput += `
+          <div class="movie-container">
+          <div class="well text-center">
+          <img src=${movie.poster_path}
+          <h4>${movie.title}</h4>
+          <a onclick="movieSelected('${movie.id}')" class="btn btn-primary" href="#">Movie Details</a>
+          </div>
+          </div>
+          `;
+         }
          console.log(data);
+         4(".movie-container").html(output);
        })
        .catch((error) => {
          console.log(error);
        });
    });
    
-//Dave's code begins
+
 
 function showMovie() {
   var movieEl = document.createElement("div");
   movieEl.setAttribute("class", "movie");
+  movieEl.innerText = data.page.results
 } 
-//Dave's code ends
+
 
 //Below code uses local storage to render recent searches as buttons lower on the page above the footer
 
