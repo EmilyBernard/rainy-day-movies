@@ -112,3 +112,13 @@ html, body {
 
 }
 
+.search {
+    background-color: transparent;
+    border: 2px solid;
+    border-radius: 50px;
+    font-size: 1rem;
+    padding: .35rem;
+    color: #000;
+}
+
+
