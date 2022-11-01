@@ -1,4 +1,106 @@
+:root {
+    --white: #fff;
+    --darkblue: #003459;
+    --darkerblue: #00171f;
+    --black: #000;
+    --textalign: center;
+  }
 
+  * {
+    margin:0;
+    padding:0;  
+  }
+
+  body {
+    position: relative;
+    font-family: "Goudy Bookletter 1911", sans-serif;
+    font-size: 18px;
+    color: var(--white);
+  }
+
+h1 {
+    float: left;
+    text-align: center;
+  }
+
+h2 {
+    text-align: center;
+    padding-top: 120px;
+    font-size: 100px;
+  }
+
+.search {
+    background-color: transparent;
+    border: 2px solid;
+    border-radius: 30px;
+    font-size: 1rem;
+    padding: .35rem;
+    color: var(--darkblue);
+    height: 50px;
+    float: left;
+    margin-left: 10px;
+}
+
+#button {
+    display: flex;
+    padding: 0 25px 25px 25px;
+    background-color: rgba(12, 85, 145, 0.81);
+    color: white;
+    border-radius: 10px;
+    height: 50px;
+    text-align: center;
+}
+#button:hover {
+    background: rgb(211, 242, 252);
+    color: var(--black);
+
+  }
+
+  .nav {
+    text-align: center;
+    float: left;
+  }
+
+  .nav a:hover {
+    background: rgb(211, 242, 252);
+    color: var(--black);
+
+  }
+  a:link, a:visited {
+    background-color: transparent;
+    color: var(--white);
+    padding: 0px 0px;
+    text-align: var(--textalign);
+    text-decoration: none;
+    display: inline-block;
+  } 
+/* Modifies the li elements mainly for the nav bar */
+  li {
+    display: inline;
+    padding: 0px 20px;
+    text-decoration: none;
+  }
+
+  header,
+  footer {
+    height: 60px;
+    width: 100%;
+    line-height: 60px;
+    background-color: var(--darkerblue);
+    position:absolute;
+    border-bottom: 10px solid var(--darkblue);
+    margin-top: 20px;
+    text-align: var(--textalign);
+  } 
+/* Sets the background image behind the header */
+  .background {
+    background-image: url("/pics/top view umbrella.jpeg");
+    background-size: cover;
+    height: 300px;
+    margin-bottom: 20px;
+  }
+
+  /* end */
 
 html, body {
     height: 100%;
@@ -6,15 +108,34 @@ html, body {
     font-family: sans-serif;
     }
 
-.button {
-    display: flex;
-    padding: 5px;
-    background-color: rgba(12, 85, 145, 0.81);
-    color: white;
-    border-radius: 10px;
+#poster {
+    height: 390px;
+    width: 500px;
+    margin-left: 50px;
 }
 
-.navbar {
+.movieInfo {
+    display: flex; 
+    justify-content: center;
+}
+
+#overview {
+    color: black;    
+    font-size: 20px;
+}
+
+.overviewContent {
+    background-color: lightblue;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    border: 2px solid;
+    border-radius: 30px;  
+    border-color: black;  
+    padding: 20px;
+}
+
+/* .navbar {
     padding: .8rem;
 }
 
@@ -24,14 +145,14 @@ html, body {
 
 .nav-link {
     font-size: 1.1em;
-}
+} */
 
-.carousel-inner img {
+/* .carousel-inner img {
     width: 100%;
     height: 100%;
-}
+} */
 
-.carousel-caption {
+/* .carousel-caption {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -49,7 +170,7 @@ html, body {
     font-size: 200%;
     font-weight: 500;
     text-shadow: 1px 1px 10px #000;
-}
+} */
 
 .about {
 
@@ -112,13 +233,6 @@ html, body {
 
 }
 
-.search {
-    background-color: transparent;
-    border: 2px solid;
-    border-radius: 50px;
-    font-size: 1rem;
-    padding: .35rem;
-    color: #000;
-}
+
 
 
