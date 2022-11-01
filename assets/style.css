@@ -94,8 +94,8 @@ h2 {
   } 
 /* Sets the background image behind the header */
   .background {
-
-    background-image: url("../pics/top_view_umbrella.jpg");
+  
+    background-image: url("../pics/top view umbrella.jpg");
 
     background-size: cover;
     height: 300px;
