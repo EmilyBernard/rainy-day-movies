@@ -4,14 +4,6 @@ var trailerSearch;
 var searchMovieForm = document.querySelector("#searchMovieForm");
 var videoId;
 
-var buttonEl = document.querySelector("#search");
-var movieSearch = document.querySelector("#search");
-
-var url =
-  "https://api.themoviedb.org/3/search/movie?api_key=3dd58e763b5dcef7202b88abe0351696";
-var apiKey = "3dd58e763b5dcef7202b88abe0351696";
-var imageUrl = "https://image.tmdb.org/t/p/w1280";
-
 // function that uses the search to play a youtube video
 // 2. This code loads the IFrame Player API code asynchronously.
 var tag = document.createElement('script');
@@ -22,20 +14,15 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var player;
 function callApi() { 
   trailerSearch = search + " trailer";
-  console.log('search state: ' + search)
-  console.log('trailer search: ' + trailerSearch);
   var ApiUrl = 'https://www.googleapis.com/youtube/v3/search?part=snippet&q=' + trailerSearch + '&key=AIzaSyAEuOGOFQEVyN6up7iA-a-ABzZHsde4ChU';   
   fetch(ApiUrl)
     .then(function (response) {
       return response.json();
     })
     .then(function (response) {
-      console.log('apicall in api call function: ' + ApiUrl);
       videoId = response.items[0].id.videoId;
-      console.log('this is the videoid in the function: ' + videoId);
       loadVideo(videoId);
     })
-    console.log('this is videoid outside the .then ' + videoId);
     return videoId;
 }
   // 3. This function creates an <iframe> (and YouTube player)
@@ -74,49 +61,32 @@ function loadVideo(videoId) {
   }
 
 }
-
   searchMovieForm.addEventListener("submit", function () {
     event.preventDefault();
     search = $("#search").val().trim();
-    console.log(search);
     callApi();
-    //  console.log('test');
-    //  const value = movieSearch.value;
-    //  console.log("Value: ", value);
-    //  const newUrl = url + "&query=" + value;
-    // console.log(newUrl);
-    //  fetch(newUrl)
-    //    .then((res) => res.json())
-    //    .then((data) => {
-    //      const movies = data.results;
-    //      var output = '';
-        //  $.each(movies, index, movie) => {
-        //   ouput += `
-        //   <div class="movie-container">
-        //   <div class="well text-center">
-        //   <img src=${movie.poster_path}
-        //   <h4>${movie.title}</h4>
-        //   <a onclick="movieSelected('${movie.id}')" class="btn btn-primary" href="#">Movie Details</a>
-        //   </div>
-        //   </div>
-        //   `;
-        //  }
-      //    console.log(data);
-      //    4(".movie-container").html(output);
-      //  })
-      //  .catch((error) => {
-      //    console.log(error);
-      //  });
+    movieDbCall();
    });
-   
 
-
-// function showMovie() {
-//   var movieEl = document.createElement("div");
-//   movieEl.setAttribute("class", "movie");
-//   movieEl.innerText = data.page.results
-// } 
-
+    function movieDbCall() {
+      var url = "https://api.themoviedb.org/3/search/movie?api_key=3dd58e763b5dcef7202b88abe0351696";
+      const newUrl = url + "&query=" + search;
+      console.log(newUrl);
+       
+      fetch(newUrl)
+       .then(function (response) {
+        return response.json();
+       })
+         .then(function (response) {
+          overview = response.results[0].overview;
+          poster = response.results[0].poster_path;
+          $("#overview").html(overview);
+          $("#poster").attr("src", 'https://image.tmdb.org/t/p/original' + poster);
+        
+          console.log(poster);
+          console.log(overview);
+         })
+       }
 
 // //Below code uses local storage to render recent searches as buttons lower on the page above the footer
 
