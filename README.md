@@ -1,8 +1,10 @@
-# rainy-day-movies
+# Rainy Day Movies
 Users can look up movies they are interested in learning more about.  A search will bring up the movie’s plot and poster and a YouTube element will load a trailer.
+
 
 # Project Status
 Submitted for evaluation.
+
 
 # Project Deployed
 https://emilybernard.github.io/rainy-day-movies/
@@ -12,10 +14,11 @@ https://emilybernard.github.io/rainy-day-movies/
 
 
 # Installation
-Used HTML JavaScript and CSS coding to build website.
-Used YouTube API to capture and render movie trailers. https://developers.google.com/youtube/v3
-
-Used TheMovieDataBase API to capture and render movie plot and movie poster. https://developers.themoviedb.org/3/getting-started/introduction
+<ul style="none">
+<li>Used HTML JavaScript and CSS coding to build website.
+<li>Used YouTube API to capture and render movie trailers. https://developers.google.com/youtube/v3
+<li>Used TheMovieDataBase API to capture and render movie plot and movie poster. https://developers.themoviedb.org/3/getting-started/introduction
+</ul>
 
 
 # Usage
@@ -40,9 +43,10 @@ Users can search for movie titles which renders the movie trailer and the movie 
 Features that could be added for better user experience: add functionality to the 'Recent Searches' link to allow user to click those list buttons to retrieve that movie. Create the same type of list and functionality to a 'Saved Movies' feature accesible in the nav bar. Add the carousel functionality to the 'hero' container.  Could capture and render more info from the TMDB API to include reviews or other notable data.
 
 # Authors and Maintainers:
-Emily Bernard
-Robert Obernier
-David Proto
-Rashad Spell
-
+<ul>
+<li>Emily Bernard
+<li>Robert Obernier
+<li>David Proto
+<li>Rashad Spell
+</ul>
 
