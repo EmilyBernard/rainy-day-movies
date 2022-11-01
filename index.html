@@ -16,23 +16,28 @@
 
 <body>
   <!-- Navbar-->
-  <class="search">Search movies
-    <form id="searchMovieForm"> <input id="search" class="search" type="text" placeholder="search..." name="search">
-      <button id="button" type="submit">Submit</button>
-    </form>
+  <header>
+  <nav>
+  <h1>Search movies</h1>
   
-  <ul class="nav justify-content-end">
-    <li class="nav-item">
-      <a class="nav-link active" href="#about-me">Recommended</a>
-    </li>
-    <li class="nav-item">
-      <a href="#recent-searches" id="history" class="nav-link active">My Searches</a>
-    </li>
-   
+  
+  <ul class="nav">
+      <li><form id="searchMovieForm"> <input id="search" class="search" type="text" placeholder="search..." name="search">
+      <button id="button" type="submit">Submit</button>
+    </form></li>
+    <li> <a href="#about-me">Recommended</a></li>
+    <li> <a href="#recent-searches">My Searches</a></li>
+    <li> <a href="#">My List</a></li>
   </ul>
+</nav>
+</header>
+
+<div class="background">
+  <h2>Rainy Day Movies
+  </div></h2>
 
   <!-- Image Slider-->
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -61,11 +66,14 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
-  </div>
-
+  </div> -->
+<section class="movieInfo">
   <div id="player"></div>
-  <div id="overview"></div>
   <img id="poster" src=""></img>
+</section>
+<section class="overviewContent">
+  <div id="overview"></div>
+  </section>
   <!--Check it out-->
   <section class="about" id="about-me">
     <div class="main">
