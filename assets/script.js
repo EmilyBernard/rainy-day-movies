@@ -66,6 +66,8 @@ function loadVideo(videoId) {
     search = $("#search").val().trim();
     callApi();
     movieDbCall();
+    store();
+    viewHistory() 
    });
 
     function movieDbCall() {
@@ -90,33 +92,33 @@ function loadVideo(videoId) {
 
 // //Below code uses local storage to render recent searches as buttons lower on the page above the footer
 
-// var submitButton = document.getElementById('button');
-// var viewed = JSON.parse(localStorage.getItem("viewed")) || []
-// console.log(viewed)
-// viewHistory()
-// submitButton.addEventListener("click", function(event) {
-//     event.preventDefault();
-//     store();
-//     });
+//var submitButton = document.getElementById('button');
+var viewed = JSON.parse(localStorage.getItem("viewed")) || []
+console.log(viewed)
+viewHistory()
+submitButton.addEventListener("click", function(event) {
+    event.preventDefault();
 
-// function store(){
-//     var searched = document.getElementById('search').value;
-//     console.log(searched);
-//     if(viewed.indexOf(searched)=== -1){
-//       viewed.push(searched)
-//       localStorage.setItem('viewed', JSON.stringify(viewed));
-//       viewHistory() 
-//     }
-// };
+    });
 
-// function viewHistory(){
-//   var historyUl=document.getElementById('recent-searches')
-//   historyUl.innerHTML=""
-//   for (var i=0; i < viewed.length; i++){
-//     var value=viewed[i]
-//     var button=document.createElement("button")
-//     button.classList.add("button")
-//     button.textContent=value
-//     historyUl.append(button)
-//   }
-// }
+function store(){
+    var searched = document.getElementById('search').value;
+    console.log(searched);
+    if(viewed.indexOf(searched)=== -1){
+      viewed.push(searched)
+      localStorage.setItem('viewed', JSON.stringify(viewed));
+   
+    }
+};
+
+function viewHistory(){
+  var historyUl=document.getElementById('recent-searches')
+  historyUl.innerHTML=""
+  for (var i=0; i < viewed.length; i++){
+    var value=viewed[i]
+    var button=document.createElement("button")
+    button.classList.add("button")
+    button.textContent=value
+    historyUl.append(button)
+  }
+}
