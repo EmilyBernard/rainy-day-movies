@@ -10,7 +10,7 @@ Submitted for evaluation.
 https://emilybernard.github.io/rainy-day-movies/
 
 # Screenshot of webpage
-<img src="assets/images/Screen Shot rainy-day-movies.png" alt="Website Screenshot">
+<img src="assets/images/ScreenShotRockyDeployed.png">
 
 
 # Installation
