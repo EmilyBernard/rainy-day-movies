@@ -14,7 +14,7 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var player;
 function callApi() { 
   trailerSearch = search + " trailer";
-  var ApiUrl = 'https://www.googleapis.com/youtube/v3/search?part=snippet&q=' + trailerSearch + '&key=AIzaSyAEuOGOFQEVyN6up7iA-a-ABzZHsde4ChU';   
+  var ApiUrl = 'https://www.googleapis.com/youtube/v3/search?part=snippet&q=' + trailerSearch + '&key=AIzaSyDceRQYAoyA-rjG3eX5RcdsBhSZast4J_s';   
   fetch(ApiUrl)
     .then(function (response) {
       return response.json();
